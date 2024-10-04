@@ -1,0 +1,33 @@
+// COLORS
+:root {
+  --color-blue: #345ff6;
+  --color-blue-alt: #e7f5fe;
+  --color-gray: #253347;
+  --color-blue-gray: #5e6e85;
+  --color-white: #ffffff;
+  --color-rose: #f21e84;
+  --color-rose-opacity: rgba(242, 30, 132, 0.15);
+  --color-orange: #f69134;
+  --color-orange-opacity: rgba(246, 145, 52, 0.15);
+  --color-azure: #22c1c1;
+  --color-azure-opacity: rgba(34, 193, 193, 0.15);
+  --color-yellow: #ffc700;
+  --color-wiolet: #9747ff;
+
+  --gradient: linear-gradient(
+    to bottom right,
+    rgba(214, 252, 254, 0),
+    rgba(214, 230, 254, 1)
+  );
+
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+
+  --container-width: 1440px;
+
+  --border-radius-extra: 35px;
+  --border-radius-large: 32px;
+  --border-radius-small: 16px;
+
+  --box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+
+  &__padding-bottom-big {
+    padding-bottom: 120px;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// .hidden-mobile {
+//   @include mobile {
+//     display: none !important;
+//   }
+// }
+
+// .visible-mobile {
+//   @include mobile-above {
+//     display: none !important;
+//   }
+// }

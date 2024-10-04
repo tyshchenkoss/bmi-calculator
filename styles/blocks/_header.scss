@@ -1,0 +1,96 @@
+.header {
+  &__container {
+    position: relative;
+  }
+
+  &__logo {
+    @include desktop {
+      width: 36px;
+      aspect-ratio: 1;
+    }
+  }
+
+  &__inner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 131px;
+    margin-left: 24px;
+    height: 737px;
+    width: 978px;
+    padding: 75px 0 0 116px;
+    background: var(--gradient);
+    border-radius: 0 0 35px 35px;
+
+    @include desktop {
+      width: 100%;
+      padding: 33px 41px 0 41px;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+      margin-left: 0;
+      height: 640px;
+    }
+
+    @include mobile {
+      gap: 24px;
+      padding: 33px 24px 0 24px;
+    }
+
+    &-body {
+      width: 564px;
+
+      @include desktop {
+        width: 686px;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &-heading {
+      color: var(--color-gray);
+      margin-bottom: 35px;
+
+      @include desktop {
+        letter-spacing: -5%;
+        font-size: 48px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &-description {
+      color: var(--color-blue-gray);
+      font-size: var(--font-size-m);
+      max-width: 465px;
+
+      @include desktop {
+        max-width: 686px;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  &__calculator {
+    position: absolute;
+    top: 181px;
+    right: 140px;
+
+    @include desktop {
+      width: 686px;
+      right: 50%;
+      top: 354px;
+      transform: translateX(50%);
+    }
+
+    @include mobile {
+      // display: none;\
+      top: 471px;
+      width: calc(100% - (24px * 2));
+    }
+  }
+}

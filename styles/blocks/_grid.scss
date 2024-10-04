@@ -1,0 +1,130 @@
+.grid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 961px;
+  display: grid;
+  grid-template-columns: repeat(10, 67px);
+  column-gap: 32px;
+  row-gap: 32px;
+
+  @include tablet {
+    position: static;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    width: 686px;
+  }
+
+  @include mobile {
+    width: 100%;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+  }
+
+  &__item {
+    padding: 32px;
+    width: 365px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-small);
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 24px;
+    }
+
+    &-1 {
+      grid-column: 6/ 9;
+
+      @include tablet {
+        // grid-column: 1/2;
+        grid-column: auto;
+      }
+    }
+
+    &-2 {
+      grid-row: 2;
+      grid-column: 3/ 6;
+
+      @include tablet {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+
+    &-3 {
+      grid-row: 2;
+      grid-column: 7/ -1;
+
+      @include tablet {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+
+    &-4 {
+      grid-row: 3;
+
+      @include tablet {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+
+    &-5 {
+      grid-row: 3;
+      grid-column: 5/ 9;
+
+      @include tablet {
+        grid-column: 1/-1;
+        justify-self: center;
+        max-width: 365px;
+      }
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--color-gray);
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    color: var(--color-blue-gray);
+  }
+
+  &__icon {
+    &--orange {
+      color: var(--color-orange);
+    }
+
+    &--azure {
+      color: var(--color-azure);
+    }
+
+    &--wiolet {
+      color: var(--color-wiolet);
+    }
+
+    &--yellow {
+      color: var(--color-yellow);
+    }
+
+    &--rose {
+      color: var(--color-rose);
+    }
+  }
+}

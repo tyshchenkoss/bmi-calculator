@@ -1,0 +1,89 @@
+.tip {
+  margin-top: 65px;
+  margin-inline: 24px;
+  border-radius: var(--border-radius-extra);
+  background: linear-gradient(
+    290deg,
+    rgba(214, 230, 254, 0.3) 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+  padding: 72px 117px;
+
+  @include tablet {
+    padding: 40px 60px;
+    width: 100%;
+    margin-inline: 0;
+    border-radius: none;
+  }
+
+  @include mobile {
+    padding: 56px 30px 56px 19px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__heading {
+    color: var(--color-gray);
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: var(--color-blue-gray);
+  }
+
+  &__icon {
+    width: 25px;
+    aspect-ratio: 1;
+
+    &-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      margin-bottom: 45px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
+      &--rose {
+        color: var(--color-rose);
+        background-color: var(--color-rose-opacity);
+      }
+
+      &--orange {
+        color: var(--color-orange);
+        background-color: var(--color-orange-opacity);
+      }
+
+      &--azure {
+        color: var(--color-azure);
+        background-color: var(--color-azure-opacity);
+      }
+    }
+  }
+}

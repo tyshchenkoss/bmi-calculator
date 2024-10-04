@@ -1,0 +1,107 @@
+.meaning {
+  margin-top: 65px;
+  padding-inline: 140px;
+  display: flex;
+  gap: 131px;
+
+  @include desktop {
+    margin-top: 277px;
+    gap: 75px;
+    overflow-x: hidden;
+    padding-inline: 0 43px;
+    justify-content: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding-inline: 0;
+    margin-top: 551px;
+    gap: 48px;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-basis: 564px;
+
+    @include desktop {
+      justify-content: end;
+      min-width: 435px;
+      margin-left: -116px;
+      flex-basis: 0;
+    }
+
+    @include mobile {
+      margin: 0;
+      min-width: 100%;
+      justify-content: center;
+    }
+
+    img {
+      @include desktop {
+        width: 361px;
+        height: auto;
+      }
+
+      @include mobile {
+        width: 312px;
+        height: 354px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 564px;
+      height: 388px;
+      background-color: var(--color-blue-alt);
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      border-radius: var(--border-radius-large);
+
+      @include desktop {
+        width: 435px;
+        height: 300px;
+      }
+
+      @include mobile {
+        width: 100%;
+        height: 258px;
+      }
+    }
+  }
+
+  &__body {
+    width: 465px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 35px;
+
+    @include desktop {
+      min-width: 331px;
+    }
+
+    @include mobile {
+      padding: 24px 24px 0 24px;
+      gap: 32px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__heading {
+    color: var(--color-gray);
+
+    @include desktop {
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    color: var(--color-blue-gray);
+  }
+}

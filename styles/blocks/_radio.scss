@@ -1,0 +1,36 @@
+.radio {
+  &__input {
+    &:not(:checked) + .radio__emulator {
+      background-color: #fff;
+      border: 1px solid var(--color-blue-gray);
+    }
+  }
+
+  &__input {
+    &:not(:checked) + .radio__emulator::after {
+      opacity: 0;
+    }
+  }
+
+  &__emulator {
+    position: relative;
+    display: inline-flex;
+    width: 31px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgb(52, 95, 246, 0.15);
+    color: var(--color-blue);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 15px;
+      aspect-ratio: 1;
+      background-color: var(--color-blue);
+      border-radius: inherit;
+    }
+  }
+}
