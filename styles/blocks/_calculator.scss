@@ -5,10 +5,6 @@
   border-radius: var(--border-radius-small);
   background-color: var(--color-white);
 
-  @include mobile {
-    padding: 24px;
-  }
-
   &__heading {
     margin-bottom: 32px;
     color: var(--color-gray);
@@ -37,6 +33,13 @@
 
     @include mobile {
       flex-direction: column;
+      grid-template-columns: 1fr;
+    }
+
+    &--imperial {
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 
@@ -55,6 +58,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &-body {
@@ -73,6 +81,15 @@
       font-size: 64px;
       line-height: 110%;
       font-weight: 700;
+
+      @include mobile {
+        font-size: 48px;
+        letter-spacing: -0.05%;
+      }
+    }
+
+    &-description {
+      font-size: 14px;
     }
 
     @include mobile {

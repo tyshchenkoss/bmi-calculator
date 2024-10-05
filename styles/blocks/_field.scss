@@ -16,6 +16,11 @@
     width: 100%;
     max-height: 69px;
 
+    &:focus,
+    &:hover {
+      border-color: var(--color-blue);
+    }
+
     &-wrapper {
       position: relative;
 

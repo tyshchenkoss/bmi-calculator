@@ -4,6 +4,10 @@
       background-color: #fff;
       border: 1px solid var(--color-blue-gray);
     }
+
+    &:not(:checked) + .radio__emulator:hover {
+      border: 1px solid var(--color-blue);
+    }
   }
 
   &__input {
@@ -20,6 +24,10 @@
     border-radius: 50%;
     background-color: rgb(52, 95, 246, 0.15);
     color: var(--color-blue);
+
+    &:hover {
+      border-color: var(--color-blue);
+    }
 
     &::after {
       content: "";

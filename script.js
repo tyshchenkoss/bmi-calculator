@@ -26,7 +26,10 @@ const wightLbsEl = calculatorBodyEl.querySelector(
 let emptyResult = true;
 
 calculatroRaidiosEl.addEventListener("change", (e) => {
-  fields.forEach((field) => field.classList.toggle("visually-hidden"));
+  fields.forEach((field) => {
+    field.classList.toggle("visually-hidden");
+  });
+  calculatorBodyEl.classList.toggle("calculator__body--imperial");
 });
 
 const getCheckedRadio = function () {
@@ -100,7 +103,7 @@ const generateHtmlMetricBmiResult = function () {
 
   const resultString = getResultString(bmi, min, max);
 
-  return generateHtmlResult(bmi, resultString, `${min}kgs - ${max}kgs`);
+  return generateHtmlResult(bmi, resultString, `<b>${min}kgs - ${max}kgs</b>`);
 };
 
 const generateImperialHtmlBmiResult = function () {
@@ -119,7 +122,7 @@ const generateImperialHtmlBmiResult = function () {
 
   const resultString = getResultString(bmi, min, max);
 
-  return generateHtmlResult(bmi, resultString, `${min} - ${max}`);
+  return generateHtmlResult(bmi, resultString, `<b>${min} - ${max}</b>`);
 };
 
 const getOrZero = function (val) {
